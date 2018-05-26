@@ -5,7 +5,6 @@ Encore
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
-    .addEntry('js/app', './assets/js/weatherapp.js')
     .addStyleEntry('css/app', './assets/css/weatherapp.css')
 ;
 

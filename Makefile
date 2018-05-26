@@ -25,7 +25,7 @@ help:
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
 ## install
-install: env composer database yarn warmup
+install: env composer database yarn asset warmup
 
 env: .env.dist
 	cp .env.dist .env
@@ -39,6 +39,9 @@ database:
 
 yarn: package.json
 	yarn install
+
+asset:
+	yarn build
 
 warmup:
 	php bin/console cache:warmup --env=${APP_ENV}

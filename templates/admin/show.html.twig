@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'admin.show.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>{{ 'admin.show.title'|trans }}</h1>
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ city_card.id }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'city'|trans }}</th>
+                    <td>{{ city_card.city }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'longitude'|trans }}</th>
+                    <td>{{ city_card.longitude }}</td>
+                </tr>
+                <tr>
+                    <th>{{ 'latitude'|trans }}</th>
+                    <td>{{ city_card.latitude }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('city_card_index') }}">{{ 'card.return.btn'|trans }}</a>
+
+        {{ include('admin/partials/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

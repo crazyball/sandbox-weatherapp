@@ -1,0 +1,31 @@
+security:
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: admin
+                        roles: 'ROLE_ADMIN'
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+                provider: in_memory
+                default_target_path: city_card_index
+            logout:
+                path: logout
+                target: login
+
+    access_control:
+        - { path: ^/(en|fr)/admin, roles: ROLE_ADMIN }
+        - { path: ^/(en|fr), roles: IS_AUTHENTICATED_ANONYMOUSLY }

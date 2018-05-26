@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}WeatherApp!{% endblock %}</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css" integrity="sha256-KcCcakqMaamBrTFaxb9tkrP2iq1X8vUnsm86W8pRcgI=" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.css" integrity="sha256-g3zFu4dcBvjQB8EzpTMru+trkaLxViDjDR4yD7XfvKI=" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path('dashboard') }}">{{ 'title'|trans }} <i class="wi wi-night-sleet"></i></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li><a href="{{ path('city_card_index') }}" title="{{ 'admin'|trans }}">{{ 'admin'|trans }}</a></li>
+                            <li><a href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a></li>
+                        {% else %}
+                            <li><a href="{{ path('login') }}" title="{{ 'connect'|trans }}">{{ 'connect'|trans }}</a></li>
+                        {% endif %}
+                        <li>
+                            <a class="{% if app.request.locale == 'fr' %}active{% endif %}"
+                               href="{{
+                               path(
+                                   app.request.attributes.get('_route'),
+                                   app.request.attributes.get('_route_params')|merge(app.request.query.all|merge({_locale: 'fr'}))
+                               )}}"
+                               title="{{ 'lang.french'|trans }}">{{ 'lang.french'|trans }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="{% if app.request.locale == 'en' %}active{% endif %}"
+                               href="{{
+                               path(
+                                   app.request.attributes.get('_route'),
+                                   app.request.attributes.get('_route_params')|merge(app.request.query.all|merge({_locale: 'en'}))
+                               )}}"
+                               title="{{ 'lang.english'|trans }}">{{ 'lang.english'|trans }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        {% block body %}{% endblock %}
+
+        <script src="{{ asset('build/js/app.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

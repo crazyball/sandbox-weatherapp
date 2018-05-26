@@ -1,0 +1,15 @@
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /%locale%
+        permanent: true
+
+dashboard:
+    path: /{_locale}
+    controller: WeatherApp\Controller\HomeController::index
+    requirements:
+        _locale: en|fr
+
+logout:
+    path: /logout

@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="col-md-3 offset-md-3">
+        <div class="weather" style="background-color: {{ random(
+            [
+                '#ffccff', '#fad1ff', '#f6d5ff', '#f1daff', '#ecdfff',
+                '#e8e3ff', '#e3e8ff', '#dfecff', '#daf1ff', '#d5f6ff',
+                '#d1faff', '#ccffff'
+            ]
+        ) }}">
+            <div class="current">
+                <div class="info">
+                    <div>&nbsp;</div>
+                    <div class="city"><small><small>{{ 'city.label'|trans|upper }}:</small></small> {{ userCard.city }}</div>
+                    <div class="temp">{{ card.main.temp|round }} <i class="wi wi-celsius"></i></div>
+                    <div class="wind">
+                        <small>
+                            <small>{{ 'wind.label'|trans|upper }}:</small>
+                        </small> {{ card.wind.speed }} km/h
+                        {% if card.wind.deg is defined %}<i class="wi wi-wind towards-{{ card.wind.deg }}-deg"></i>{% endif %}
+                    </div>
+                    <div>&nbsp;</div>
+                </div>
+                <div class="icon">
+                    <i class="wi wi-night-{{ card.weather[0].main|lower }}"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

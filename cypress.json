@@ -1,0 +1,12 @@
+{
+  "fixturesFolder": "tests/cypress/fixtures",
+  "integrationFolder": "tests/cypress/integration",
+  "pluginsFile": false,
+  "screenshotsFolder": false,
+  "supportFile": false,
+  "baseUrl": "http://localhost:8000/",
+  "env": {
+    "APP_ENV": "prod"
+  }
+
+}

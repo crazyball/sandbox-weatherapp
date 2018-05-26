@@ -1,0 +1,16 @@
+{
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.19.0",
+        "cypress": "^2.1.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production",
+        "cypress:open": "cypress open"
+    },
+    "dependencies": {}
+}

@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div id="tiles">
+    {% for weatherCard in weatherCards %}
+        {% include 'partials/_card.html.twig' with {'card': weatherCard, 'userCard': userCards[loop.index - 1]} %}
+    {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}{% endblock %}

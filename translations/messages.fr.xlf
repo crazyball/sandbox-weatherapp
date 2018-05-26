@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en" trgLang="fr">
+  <file id="messages.fr">
+    <unit id="qvIyBkY" name="title">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:19</note>
+      </notes>
+      <segment>
+        <source>title</source>
+        <target>Application météo</target>
+      </segment>
+    </unit>
+    <unit id="SxBpDjo" name="city.label">
+      <notes>
+        <note category="file-source" priority="1">templates/partials/_card.html.twig:13</note>
+      </notes>
+      <segment>
+        <source>city.label</source>
+        <target>Ville</target>
+      </segment>
+    </unit>
+    <unit id="wXQLz0B" name="wind.label">
+      <notes>
+        <note category="file-source" priority="1">templates/partials/_card.html.twig:17</note>
+      </notes>
+      <segment>
+        <source>wind.label</source>
+        <target>Vent</target>
+      </segment>
+    </unit>
+    <unit id="iyOLzK6" name="nocards">
+      <notes>
+        <note category="file-source" priority="1">templates/home.html.twig:7</note>
+      </notes>
+      <segment>
+        <source>nocards</source>
+        <target>Aucune tuile configurée.</target>
+      </segment>
+    </unit>
+    <unit id="4lerXB_" name="lang.french">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:29</note>
+        <note category="file-source" priority="1">templates/base.html.twig:29</note>
+      </notes>
+      <segment>
+        <source>lang.french</source>
+        <target>Francais</target>
+      </segment>
+    </unit>
+    <unit id="6pLct0X" name="lang.english">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:30</note>
+        <note category="file-source" priority="1">templates/base.html.twig:30</note>
+      </notes>
+      <segment>
+        <source>lang.english</source>
+        <target>Anglais</target>
+      </segment>
+    </unit>
+    <unit id="jfstMrn" name="admin.list.title">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:3</note>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:7</note>
+      </notes>
+      <segment>
+        <source>admin.list.title</source>
+        <target>Administration : Liste des widgets</target>
+      </segment>
+    </unit>
+    <unit id="EaYsI0E" name="city">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:12</note>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:16</note>
+        <note category="file-source" priority="1">src/Form/TileType.php:26</note>
+      </notes>
+      <segment>
+        <source>city</source>
+        <target>Ville</target>
+      </segment>
+    </unit>
+    <unit id="Kw3N1AA" name="actions">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:15</note>
+      </notes>
+      <segment>
+        <source>actions</source>
+        <target>Actions</target>
+      </segment>
+    </unit>
+    <unit id="66aLQtu" name="card.show.btn">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:25</note>
+      </notes>
+      <segment>
+        <source>card.show.btn</source>
+        <target>Voir</target>
+      </segment>
+    </unit>
+    <unit id="2LyqHf." name="records.empty">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:31</note>
+      </notes>
+      <segment>
+        <source>records.empty</source>
+        <target></target>
+      </segment>
+    </unit>
+    <unit id="zcYyCDQ" name="card.add.btn">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:37</note>
+      </notes>
+      <segment>
+        <source>card.add.btn</source>
+        <target>Ajouter</target>
+      </segment>
+    </unit>
+    <unit id="jGl25bV" name="admin">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:24</note>
+        <note category="file-source" priority="1">templates/base.html.twig:24</note>
+      </notes>
+      <segment>
+        <source>admin</source>
+        <target>Administration</target>
+      </segment>
+    </unit>
+    <unit id="lrvQIul" name="card.delete.btn">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:26</note>
+        <note category="file-source" priority="1">templates/Admin/partials/_delete_form.html.twig:4</note>
+      </notes>
+      <segment>
+        <source>card.delete.btn</source>
+        <target>Supprimer</target>
+      </segment>
+    </unit>
+    <unit id="xxdFb4T" name="admin.show.title">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:3</note>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:7</note>
+      </notes>
+      <segment>
+        <source>admin.show.title</source>
+        <target>Administration : Détail</target>
+      </segment>
+    </unit>
+    <unit id="of6OEDb" name="card.return.btn">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/new.html.twig:16</note>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:30</note>
+      </notes>
+      <segment>
+        <source>card.return.btn</source>
+        <target>Retour</target>
+      </segment>
+    </unit>
+    <unit id="9xVTNS9" name="card.save.btn">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/partials/_form.html.twig:4</note>
+        <note category="file-source" priority="1">templates/Admin/partials/_form.html.twig:4</note>
+        <note category="file-source" priority="1">templates/Admin/partials/_form.html.twig:4</note>
+      </notes>
+      <segment>
+        <source>card.save.btn</source>
+        <target>Sauvegarder</target>
+      </segment>
+    </unit>
+    <unit id="V7urCzH" name="admin.add.title">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/new.html.twig:3</note>
+        <note category="file-source" priority="1">templates/Admin/new.html.twig:7</note>
+      </notes>
+      <segment>
+        <source>admin.add.title</source>
+        <target>Administration : Ajouter</target>
+      </segment>
+    </unit>
+    <unit id="VH0QkuA" name="admin.add.success">
+      <notes>
+        <note category="file-source" priority="1">src/Controller/AdminController.php:65</note>
+      </notes>
+      <segment>
+        <source>admin.add.success</source>
+        <target>Tuile ajoutée avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="NwfFUjB" name="admin.delete.success">
+      <notes>
+        <note category="file-source" priority="1">src/Controller/AdminController.php:101</note>
+      </notes>
+      <segment>
+        <source>admin.delete.success</source>
+        <target>Tuile supprimée avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="IjZCXQD" name="cart.city.autocomplete.label">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/new.html.twig:10</note>
+      </notes>
+      <segment>
+        <source>cart.city.autocomplete.label</source>
+        <target>Aide à la geolocalisation</target>
+      </segment>
+    </unit>
+    <unit id="ZbuowsN" name="card.city.autocomplete.placeholder">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/new.html.twig:11</note>
+      </notes>
+      <segment>
+        <source>card.city.autocomplete.placeholder</source>
+        <target>Renseignez une adresse, ville ...</target>
+      </segment>
+    </unit>
+    <unit id="fdDIXJR" name="longitude">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:13</note>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:20</note>
+        <note category="file-source" priority="1">src/Form/TileType.php:25</note>
+      </notes>
+      <segment>
+        <source>longitude</source>
+        <target>Longitude</target>
+      </segment>
+    </unit>
+    <unit id="f.h.a0H" name="latitude">
+      <notes>
+        <note category="file-source" priority="1">templates/Admin/index.html.twig:14</note>
+        <note category="file-source" priority="1">templates/Admin/show.html.twig:24</note>
+        <note category="file-source" priority="1">src/Form/TileType.php:25</note>
+      </notes>
+      <segment>
+        <source>latitude</source>
+        <target>Latitude</target>
+      </segment>
+    </unit>
+    <unit id="ACcM9j_" name="logout">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:25</note>
+        <note category="file-source" priority="1">templates/base.html.twig:25</note>
+      </notes>
+      <segment>
+        <source>logout</source>
+        <target>Se déconnecter</target>
+      </segment>
+    </unit>
+    <unit id="WmOKEoy" name="connect">
+      <notes>
+        <note category="file-source" priority="1">templates/base.html.twig:27</note>
+        <note category="file-source" priority="1">templates/base.html.twig:27</note>
+      </notes>
+      <segment>
+        <source>connect</source>
+        <target>Se connecter</target>
+      </segment>
+    </unit>
+    <unit id="20eTU.D" name="login.form.title">
+      <notes>
+        <note category="file-source" priority="1">templates/security/login.html.twig:9</note>
+      </notes>
+      <segment>
+        <source>login.form.title</source>
+        <target>Veuillez vous identifier</target>
+      </segment>
+    </unit>
+    <unit id="UVnEemT" name="login.form.username.label">
+      <notes>
+        <note category="file-source" priority="1">templates/security/login.html.twig:18</note>
+      </notes>
+      <segment>
+        <source>login.form.username.label</source>
+        <target>Pseudo (demo: admin)</target>
+      </segment>
+    </unit>
+    <unit id="OyhW8sn" name="login.form.password.label">
+      <notes>
+        <note category="file-source" priority="1">templates/security/login.html.twig:21</note>
+      </notes>
+      <segment>
+        <source>login.form.password.label</source>
+        <target>Mot de passe (demo: admin)</target>
+      </segment>
+    </unit>
+    <unit id="KXSzZJt" name="login.form.submit">
+      <notes>
+        <note category="file-source" priority="1">templates/security/login.html.twig:23</note>
+      </notes>
+      <segment>
+        <source>login.form.submit</source>
+        <target>Me connecter</target>
+      </segment>
+    </unit>
+    <unit id="xdtL8nf" name="message.service_temporary_offline">
+      <notes>
+        <note category="file-source" priority="1">src/Controller/HomeController.php:71</note>
+        <note category="state" priority="1">new</note>
+      </notes>
+      <segment>
+        <source>message.service_temporary_offline</source>
+        <target>Service temporairement hors ligne. Veuillez re-essayer plus tard.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

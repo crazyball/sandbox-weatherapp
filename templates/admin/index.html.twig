@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'admin.list.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>{{ 'admin.list.title'|trans }}</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>{{ 'city'|trans }}</th>
+                    <th>{{ 'longitude'|trans }}</th>
+                    <th>{{ 'latitude'|trans }}</th>
+                    <th>{{ 'actions'|trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for city_card in city_cards %}
+                <tr>
+                    <td>{{ city_card.city }}</td>
+                    <td>{{ city_card.longitude }}</td>
+                    <td>{{ city_card.latitude }}</td>
+                    <td>
+                        <a href="{{ path('city_card_show', {'id': city_card.id}) }}" title="show-{{ city_card.id }}">{{ 'card.show.btn'|trans }}</a> |
+                        <a href="{{ path('city_card_delete', {'id': city_card.id}) }}" title="delete-{{ city_card.id }}">{{ 'card.delete.btn'|trans }}</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5">{{ 'records.empty'|trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a class="btn btn-primary" href="{{ path('city_card_new') }}">{{ 'card.add.btn'|trans }}</a>
+        <a href="{{ path('dashboard') }}">{{ 'card.return.btn'|trans }}</a>
+    </div>
+{% endblock %}

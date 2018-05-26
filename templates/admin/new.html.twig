@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'admin.add.title'|trans }}{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>{{ 'admin.add.title'|trans }}</h1>
+
+        <div id="locationField" class="form-group">
+            <label for="autocomplete" class="form-control-label required">{{ 'cart.city.autocomplete.label'|trans }}</label>
+            <input id="autocomplete" name="locatation-helper" onFocus="geolocate()" class="form-control" placeholder="{{ 'card.city.autocomplete.placeholder'|trans }}" type="text"/>
+        </div>
+
+        {{ include('admin/partials/_form.html.twig') }}
+
+        <a href="{{ path('city_card_index') }}">{{ 'card.return.btn'|trans }}</a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&libraries=places&callback=initAutocomplete"></script>
+{% endblock %}

@@ -24,22 +24,11 @@ help:
 	} \
 	{ lastLine = $$0 }' $(MAKEFILE_LIST)
 
-.env: .env.dist
-	$(call generate_env, .env)
-
--include .env
-
-define generate_env
-	@if [ -e $(1) ]; then \
-		grep -v "`env | awk 'BEGIN {FS="="}; {print "^"$$1"="}'`" $(1).dist | grep -v "`cat $(1) | awk 'BEGIN {FS="="}; {print "^"$$1"="}'`" >> $(1); \
-	else \
-		touch $(1); \
-		grep -v "`env | awk 'BEGIN {FS="="}; {print "^"$$1"="}'`" $(1).dist >> $(1); \
-	fi;
-endef
-
 ## install
-install: .env composer database yarn warmup
+install: env composer database yarn warmup
+
+env: .env.dist
+	cp .env.dist .env
 
 composer: composer.json
 	composer install
